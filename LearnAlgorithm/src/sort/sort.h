@@ -14,10 +14,15 @@ void bubbleSort1(int a[], int n);
 void bubbleSort2(int a[], int n);
 
 
-
 void quickSort(int a[], int l, int r);
-
 int adjustArray(int a[], int l, int r);
+
+
+
+
+//------------------测试用例---------------
+void testBubbleSort();
+void testQuickSort();
 
 
 #endif /* SORT_H_ */

@@ -4,20 +4,16 @@
 #include <ctype.h>
 using namespace std;
 
-void test_itoa();
-void test_atoi();
-void test_string_copy();
-void test_string_match();
-void test();
 
-int main(void) {
 
-//	test_atoi();
-//	test_itoa();
-//	test();
-	test_string_copy();
-	test_string_match();
-}
+//int main(void) {
+//
+////	test_atoi();
+////	test_itoa();
+////	test();
+//	test_string_copy();
+//	test_string_match();
+//}
 
 void test() {
 	printf("string\n");
@@ -130,35 +126,42 @@ void nativeStringMatch(char* target, char* pattern) {
 	}
 	//从target字符串 中遍历
 	while ('\0' != target[tarLen]) {
-		int TmpTarLen = tarLen;
+		int tmpTarLen = tarLen;
+
 		for (int i = 0; i < patLen; i++) {
-			if (target[TmpTarLen++] != pattern[i])
+			if (target[tmpTarLen++] != pattern[i])
 				break;
-			if (i == patLen - 1)
+			if (i == patLen-1)
 				cout << "Native String Matching,pattern occurs with shift "
 						<< tarLen << endl;
 		}
+
 		tarLen++;
 	}
-
 }
+
+/*TODO 缺陷
+ * 如果target比pattern长度还小
+ */
 
 //-------------KMP字符串匹配方法-----------------------------------------------------
 //计算前缀函数
 void CptPfFunc(char Pattern[], int PrefixFunc[]) {
-	register int iLen = 0;    // Length of Pattern[]
+	int iLen = 0;    //pattern 的长度
 	while ('\0' != Pattern[iLen]) {
 		iLen++;
 	}
-	int LOLP = 0;     // Lenth of longest prefix
+	int LOLP = 0;     // Length of longest prefix
 	PrefixFunc[1] = 0;
 
 	for (int NOCM = 2; NOCM < iLen + 1; NOCM++) // NOCM represent the number of characters matched
 			{
-		while (LOLP > 0 && (Pattern[LOLP] != Pattern[NOCM - 1]))
+		while (LOLP > 0 && (Pattern[LOLP] != Pattern[NOCM - 1])) {
 			LOLP = PrefixFunc[LOLP];
-		if (Pattern[LOLP] == Pattern[NOCM - 1])
+		}
+		if (Pattern[LOLP] == Pattern[NOCM - 1]) {
 			LOLP++;
+		}
 		PrefixFunc[NOCM] = LOLP;
 	}
 }
@@ -170,7 +173,7 @@ void kmpStringMatch(char* target, char* pattern) {
 	int TarLen = 0;
 	int PatLen = 0;
 
-	// Compute the length of array Target and Pattern
+	//计算两个字符串的长度 ?? 是否用strlen代替
 	while ('\0' != target[TarLen])
 		TarLen++;
 

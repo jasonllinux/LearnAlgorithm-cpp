@@ -4,10 +4,13 @@
  *  Created on: 2013-3-10
  *      Author: SHEN JIE
  */
-
-
+//#include "src/util/util.h"
+#include <iostream>
 #include "sort.h"
-#include "util.h"
+#include "util/util.h"
+
+
+using namespace std;
 
 void bubbleSort1(int a[], int n) {
 	int i, j;
@@ -66,4 +69,30 @@ int adjustArray(int a[], int l, int r) {
 	a[i] = x;
 	return i;
 
+}
+
+//-------------------测试用例----------------------------
+
+
+void testBubbleSort() {
+	cout<<"Test Bubble Sort.................."<<endl;
+	int data[] = {1, 8, 5, 98, 56, 88, 45};
+		bubbleSort1(data, 6);
+		for(int i=0; i<=6; i++) {
+			cout<< data[i]<< ",";
+		}
+
+		cout<<endl<<endl;
+}
+
+void testQuickSort() {
+	int data[] = {1, 8, 5, 98, 56, 88, 45, 12, 15, 8, 95};
+	int length = 0;
+	GET_ARRAY_LEN(data, length);
+
+	quickSort(data, 0 , length-1);
+	for(int i=0; i<5; i++) {
+
+		cout<<data[i]<<endl;
+	}
 }

@@ -5,40 +5,36 @@
  *      Author: rescue01
  */
 
-#include "util.h"
-#include "sort.h"
-#include "stdio.h"
 #include <iostream>
+#include "util.h"
+#include "sort/sort.h"
+#include "stdio.h"
+#include "string/string_util.h"
 
 using namespace std;
 
 //test
-void testBubbleSort();
-void testQuickSort();
 void testPointerSize();
 void testSize();
 void testIntArray();
 void testSwap();
 
-int main_test(void) {
+
+//测试的总入口
+int main(void) {
 //	testBubbleSort();
 //	testPointerSize();
 //	testSize();
 //	testIntArray();
 //	testSwap();
 	testQuickSort();
+
+	//	test_atoi();
+	//	test_itoa();
+	//	test();
+	test_string_copy();
+	test_string_match();
 	return 0;
-}
-
-void testBubbleSort() {
-	cout<<"Test Bubble Sort.................."<<endl;
-	int data[] = {1, 8, 5, 98, 56, 88, 45};
-		bubbleSort1(data, 6);
-		for(int i=0; i<=6; i++) {
-			cout<< data[i]<< ",";
-		}
-
-		cout<<endl<<endl;
 }
 
 
@@ -48,19 +44,6 @@ void testIntArray() {
 	for(int i=0; i<10; i++) {
 //		cout<<*(num+i)<<endl;
 		cout<<num[i]<<endl;
-	}
-}
-
-//TODO 测试快速排序
-void testQuickSort() {
-	int data[] = {1, 8, 5, 98, 56, 88, 45, 12, 15, 8, 95};
-	int length = 0;
-	GET_ARRAY_LEN(data, length);
-
-	quickSort(data, 0 , length-1);
-	for(int i=0; i<5; i++) {
-
-		cout<<data[i]<<endl;
 	}
 }
 
