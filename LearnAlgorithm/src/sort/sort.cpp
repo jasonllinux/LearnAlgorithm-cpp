@@ -4,11 +4,12 @@
  *  Created on: 2013-3-10
  *      Author: SHEN JIE
  */
-//#include "src/util/util.h"
+
+
 #include <iostream>
 #include "sort.h"
-#include "util/util.h"
-
+//TODO 头文件包含问题
+#include "util/utility.h"
 
 using namespace std;
 
@@ -19,7 +20,8 @@ void bubbleSort1(int a[], int n) {
 		need = false;
 		for(j=0; j<n-i; j++) {
 			if(a[j] > a[j+1]) {
-//				swap(&a[j], &a[j+1]);  //TODO
+				//交换两个数
+				swap(a[j], a[j+1]);
 				need = true;
 			}
 		}
@@ -34,7 +36,7 @@ void bubbleSort2(int a[], int n) {
 
 
 void quickSort(int a[], int l, int r) {
-	if(l<r) {
+	if(l < r) {
 		int i = adjustArray(a, l, r);
 		quickSort(a, l, i-1);
 		quickSort(a,i, r);
@@ -88,6 +90,7 @@ void testBubbleSort() {
 void testQuickSort() {
 	int data[] = {1, 8, 5, 98, 56, 88, 45, 12, 15, 8, 95};
 	int length = 0;
+	//获得数组的长度
 	GET_ARRAY_LEN(data, length);
 
 	quickSort(data, 0 , length-1);

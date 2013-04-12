@@ -1,21 +1,13 @@
 /*
- * util.cpp
+ * utility.cpp
  *
- *  Created on: 2013-3-10
+ *  Created on: 2013-4-12
  *      Author: rescue01
  */
 
-#include "util.h"
+#include "utility.h"
 #include <iostream>
 #include <cstdlib>
-
-//void swap(int *a, int *b) {
-//	int tmp;
-//	tmp = *a;
-//	*a = *b;
-//	*b = tmp;
-//}
-
 
 //随机产生随机数组
 void generateArray(int n[], int num) {
@@ -24,4 +16,12 @@ void generateArray(int n[], int num) {
 
 		n[i] = abs(rand())*100%100;
 	}
+}
+
+
+
+void swap(int &a, int &b ) {
+	int temp = b;
+	b = a;
+	a = temp;
 }

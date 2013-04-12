@@ -6,10 +6,10 @@
  */
 
 #include <iostream>
-#include "util.h"
 #include "sort/sort.h"
 #include "stdio.h"
 #include "string/string_util.h"
+#include "util/utility.h"
 
 using namespace std;
 
@@ -27,7 +27,7 @@ int main(void) {
 //	testSize();
 //	testIntArray();
 //	testSwap();
-	testQuickSort();
+//	testQuickSort();
 
 	//	test_atoi();
 	//	test_itoa();
