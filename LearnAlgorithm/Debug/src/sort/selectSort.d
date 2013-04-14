@@ -1,7 +1,7 @@
-src/sort/insertSort.d: ../src/sort/insertSort.cpp \
- ../src/sort/insertSort.h \
+src/sort/selectSort.d: ../src/sort/selectSort.cpp \
+ ../src/sort/selectSort.h \
  /home/rescue01/git/LearnAlgorithm-cpp/LearnAlgorithm/src/util/utility.h
 
-../src/sort/insertSort.h:
+../src/sort/selectSort.h:
 
 /home/rescue01/git/LearnAlgorithm-cpp/LearnAlgorithm/src/util/utility.h:

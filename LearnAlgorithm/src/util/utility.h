@@ -14,7 +14,7 @@
 //产生num个从0到100的数组
 void generateArray(int a[], int num);
 
-
+void printArray(int a[], int num);
 
 //交换数组中的两个数
 void swap(int &a, int &b);

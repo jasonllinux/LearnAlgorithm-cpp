@@ -32,8 +32,9 @@ int main(void) {
 	//	test_atoi();
 	//	test_itoa();
 	//	test();
-	test_string_copy();
-	test_string_match();
+//	test_string_copy();
+//	test_string_match();
+	testInsertSort();
 	return 0;
 }
 
