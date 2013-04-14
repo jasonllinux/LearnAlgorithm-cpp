@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/string/string_util.cpp 
+../src/string/string_fun.cpp \
+../src/string/string_match.cpp 
 
 OBJS += \
-./src/string/string_util.o 
+./src/string/string_fun.o \
+./src/string/string_match.o 
 
 CPP_DEPS += \
-./src/string/string_util.d 
+./src/string/string_fun.d \
+./src/string/string_match.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

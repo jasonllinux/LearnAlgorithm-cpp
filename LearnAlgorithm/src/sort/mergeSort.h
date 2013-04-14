@@ -12,5 +12,5 @@ void mergeArray(int a[], int first, int mid, int last, int temp[]);
 void mergeSort(int a[], int first, int last, int temp[]);
 
 
-
+//------------test case---------------------------------
 void testMergeSort();
