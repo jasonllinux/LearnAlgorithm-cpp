@@ -4,13 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/sort/sort.cpp 
+../src/sort/bubbleSort.cpp \
+../src/sort/insertSort.cpp \
+../src/sort/quickSort.cpp 
 
 OBJS += \
-./src/sort/sort.o 
+./src/sort/bubbleSort.o \
+./src/sort/insertSort.o \
+./src/sort/quickSort.o 
 
 CPP_DEPS += \
-./src/sort/sort.d 
+./src/sort/bubbleSort.d \
+./src/sort/insertSort.d \
+./src/sort/quickSort.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

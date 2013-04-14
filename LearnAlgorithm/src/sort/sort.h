@@ -8,21 +8,12 @@
 #ifndef SORT_H_
 #define SORT_H_
 
-//#include "util/utility.h"
+//冒泡排序
+#include "bubbleSort.h"
 
-void bubbleSort1(int a[], int n);
-void bubbleSort2(int a[], int n);
+//插入排序
+#include "quickSort.h"
 
-
-void quickSort(int a[], int l, int r);
-int adjustArray(int a[], int l, int r);
-
-
-
-
-//------------------测试用例---------------
-void testBubbleSort();
-void testQuickSort();
 
 
 #endif /* SORT_H_ */
