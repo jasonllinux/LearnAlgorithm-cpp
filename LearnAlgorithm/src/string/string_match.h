@@ -12,4 +12,7 @@ void CptPfFunc(char Pattern[], int PrefixFunc[]) ;
 void kmpStringMatch(char* target, char* pattern);
 
 
+
+
+//---------------------Test Cases------------------------
 void test_string_match();

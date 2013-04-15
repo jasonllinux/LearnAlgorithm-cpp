@@ -1,5 +1,7 @@
 
 
+
+
 //直接插入排序
 void directInsertSort(int num[], int n);
 
@@ -13,7 +15,7 @@ void shellInsert(int a[], int n, int dk);
 void shellSort(int a[], int n);
 
 
-
+//---------------------------------------------------
 
 //测试用例
 void testInsertSort();
