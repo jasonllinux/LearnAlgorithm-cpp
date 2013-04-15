@@ -86,7 +86,7 @@ void shellInsert(int a[], int n, int dk) {
 
 void shellSort(int a[], int n) {
 	cout << "Shell Sort............\n";
-	int dk[] = { 5, 4, 3, 2, 1 };       //最后一个增量必须为1
+	int dk[] = { 5, 4, 3, 2, 1 };       //最后一个增量必须为1(最后步长为1)
 	for (int i = 0; i < 5; i++) {
 		shellInsert(a, n, dk[i]);
 	}
@@ -105,6 +105,7 @@ void testInsertSort() {
 //	directInsertSort(num, 10);   //done
 //	binaryInsertSort(num, 10);  //done
 	shellSort(num, 10); //?????????????
+
 
 	printArray(num, 10);
 

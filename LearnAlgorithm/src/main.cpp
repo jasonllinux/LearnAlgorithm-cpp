@@ -48,7 +48,13 @@ void testCases() {
 	//	test();
 	//	test_string_copy();
 	//	test_string_match();
-	testInsertSort();
+
+//	testInsertSort(); //插入排序 OK
+
+//	testMergeSort();	//归并排序  OK
+
+	testHeapSort();      //TODO 测试堆排序  有问题
+
 }
 
 void testIntArray() {
