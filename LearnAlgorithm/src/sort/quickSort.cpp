@@ -46,17 +46,14 @@ int adjustArray(int a[], int l, int r) {
 
 
 
-
-
 void testQuickSort() {
+	cout<<"快速排序...."<<endl;
 	int data[] = {1, 8, 5, 98, 56, 88, 45, 12, 15, 8, 95};
 	int length = 0;
 	//获得数组的长度
 	GET_ARRAY_LEN(data, length);
 
-	quickSort(data, 0 , length-1);
-	for(int i=0; i<5; i++) {
-
-		cout<<data[i]<<endl;
-	}
+	printArray(data, length);
+//	quickSort(data, 0 , length-1);
+	printArray(data, length);
 }

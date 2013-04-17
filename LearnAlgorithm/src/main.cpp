@@ -53,7 +53,9 @@ void testCases() {
 
 //	testMergeSort();	//归并排序  OK
 
-	testHeapSort();      //TODO 测试堆排序  有问题
+//	testHeapSort();      //TODO 测试堆排序  有问题
+
+	testQuickSort();
 
 }
 

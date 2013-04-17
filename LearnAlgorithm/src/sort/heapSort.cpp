@@ -87,7 +87,7 @@ void testHeapSort() {
 	generateArray(a, 10);
 	printArray(a, 10);
 	makeMinHeap(a, 10);
-	cout<<"Heap Array: ";
+	cout<<"第一次构造堆数组: ";
 	printArray(a, 10);
 	makeHeapSort(a, 10);  //堆排序主要函数
 //	makeMinHeap(a, 10);  //堆排序主要函数
