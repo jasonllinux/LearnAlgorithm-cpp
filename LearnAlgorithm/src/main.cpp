@@ -10,6 +10,7 @@
 #include "stdio.h"
 #include "string/string_util.h"
 #include "util/utility.h"
+#include "ds/list/singleList.h"
 #include <ctime>
 
 using namespace std;
@@ -53,9 +54,11 @@ void testCases() {
 
 //	testMergeSort();	//归并排序  OK
 
-//	testHeapSort();      //TODO 测试堆排序  有问题
+	testSingleList();
+//	testHeapSort();      // 测试堆排序  有问题
 
-	testQuickSort();
+//	testQuickSort();  //TODO 有问题
+
 
 }
 

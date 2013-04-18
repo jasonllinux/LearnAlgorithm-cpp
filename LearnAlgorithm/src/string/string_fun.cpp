@@ -4,15 +4,15 @@
 
 
 
-// 赋值
+// TODO 参数Const 赋值
 void string_copy(char* dest, char* src) {
 	// destination 的内存必须足够大
 	while (*src != '\0') {
-		*dest = *src;
-		dest++;
-		src++;
+		*dest++ = *src++;
+//		dest++;
+//		src++;
 	}
-	*src = '\0';
+	*dest = '\0';
 }
 
 int string_comp(char* str1, char* str2) {

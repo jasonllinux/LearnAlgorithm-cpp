@@ -27,4 +27,7 @@ src/util \
 src/string \
 src/sort \
 src \
+src/ds/stack \
+src/ds/queue \
+src/ds/list \
 

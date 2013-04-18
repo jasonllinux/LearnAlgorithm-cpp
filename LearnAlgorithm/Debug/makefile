@@ -11,6 +11,9 @@ RM := rm -rf
 -include src/util/subdir.mk
 -include src/string/subdir.mk
 -include src/sort/subdir.mk
+-include src/ds/stack/subdir.mk
+-include src/ds/queue/subdir.mk
+-include src/ds/list/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk
