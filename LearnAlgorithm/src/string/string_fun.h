@@ -13,3 +13,6 @@ int string_comp(char* str1, char* str2);
 
 //TODO 字符串的长度
 int string_length(char str[]);
+
+
+void test_string_func();

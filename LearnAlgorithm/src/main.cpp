@@ -46,7 +46,7 @@ void testCases() {
 
 	//	test_atoi();
 	//	test_itoa();
-	//	test();
+		test_string_func();
 	//	test_string_copy();
 	//	test_string_match();
 
@@ -54,7 +54,7 @@ void testCases() {
 
 //	testMergeSort();	//归并排序  OK
 
-	testSingleList();
+//	testSingleList();
 //	testHeapSort();      // 测试堆排序  有问题
 
 //	testQuickSort();  //TODO 有问题
