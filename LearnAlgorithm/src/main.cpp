@@ -37,16 +37,17 @@ int main(void) {
 }
 
 void testCases() {
+//	test_util();
 	//	testBubbleSort();
 	//	testPointerSize();
 	//	testSize();
 	//	testIntArray();
 	//	testSwap();
-	//	testQuickSort();
+		testQuickSort();
 
 	//	test_atoi();
 	//	test_itoa();
-		test_string_func();
+//		test_string_func();
 	//	test_string_copy();
 	//	test_string_match();
 

@@ -21,5 +21,12 @@ void swap(int &a, int &b);
 
 //void swap(int *a, int *b);
 
+//数组逆序
+void reverse(int a[], int i, int j);
+
+//数组循环移位
+void cycleMove(int a[], int n, int i);
+
+void test_util();
 
 #endif /* UTILITY_H_ */
