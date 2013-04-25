@@ -1,22 +1,59 @@
 #include "string_fun.h"
 #include "stdio.h"
 #include <ctype.h>
+#include <assert.h>
 
 
-
-// TODO 参数Const 赋值
+// 参数Const 赋值
 void string_copy(char* dest, char* src) {
-	// destination 的内存必须足够大
+	//注: destination 的内存必须足够大
+	assert(dest!=NULL && src!=NULL);  //assert
 	while (*src != '\0') {
 		*dest++ = *src++;
-//		dest++;
-//		src++;
 	}
 	*dest = '\0';
 }
 
-int string_comp(char* str1, char* str2) {
-	return 0;
+//src是否比dst小或者大或者相等
+int string_cmp(char* src, char* dst) {
+	assert(src!=NULL && dst!=NULL);
+
+	int ret = 0;
+	while (!(ret = *(unsigned char *) src - *(unsigned char *) dst) && *dst && *src) {  //从第一位开始比较 有非零值 就跳出
+		++src;
+		++dst;
+	}
+
+	if (ret < 0) {
+		ret = -1;
+	} else if (ret > 0) {
+		ret = 1;
+	}
+
+	return ret;
+}
+
+//从src 复制到dst后面
+char* strcat(char * dst, const char * src) {
+	char * cp = dst;
+	while (*cp) {
+		cp++;       //(1)找到dst的结尾
+	}
+	while(*src) {
+		*cp++ = *src++;
+	}
+//	while (*cp++ = *src++); //(2)拷贝直到src的终点
+
+	return (dst); /* return dst */
+}
+
+//求字符串的长度
+int string_len(char* str) {
+	int count = 0;
+	while(*str != '\0') {
+		count++;
+	}
+	return count;
 }
 
 //整型转换成ASICII码
@@ -39,11 +76,11 @@ int string_comp(char* str1, char* str2) {
 void string_itoa(int value, char *str)
 {
     if (value < 0) //如果是负数,则str[0]='-',并把value取反(变成正整数)
-
     {
         str[0] = '-';
         value = 0-value;
     }
+
     int i,j;
     for(i=1; value > 0; i++,value/=10) {//从value[1]开始存放value的数字字符，不过是逆序，等下再反序过来
 
@@ -51,13 +88,14 @@ void string_itoa(int value, char *str)
 //        printf("str[%d]: %c \n", i,str[i]);
     }
 
-    for(j=i-1,i=1; j-i>=1; j--,i++) //将数字字符反序存放
+    for(j=i-1,i=1; j-i>=1; j--,i++) //将数字字符反序存放(从index1开始)
 
     {
         str[i] = str[i]^str[j];
         str[j] = str[i]^str[j];
         str[i] = str[i]^str[j];
     }
+
     if(str[0] != '-') //如果不是负数，则需要把数字字符下标左移一位，即减1
 
     {
@@ -68,21 +106,21 @@ void string_itoa(int value, char *str)
 }
 
 int string_atoi(char str[]) {
-//	int i, n, sign;
-	int i, sum;
+
+	int i = 0, sum, sign;
+	sign = (str[i] == '-') ? -1 : 1;
+
+	for (i = 0; isspace (str[i]); i++)
+		//TODO 跳过空白符
+		;
 	/*
-	 for (i = 0; isspace (s[i]); i++)
-	 //跳过空白符
-	 ;
-	 sign = (str[i] == '-') ? -1 : 1;
 	 if (str[i] == '+' || str[i] == '-') //跳过符号
 	 i++;
 	 */
-	for (sum = 0; isdigit(str[i]); i++)
+	for (sum = 0; isdigit(str[i]); i++) {
 		sum = 10 * sum + (str[i] - '0'); //将数字字符转换成整形数字
-//	return sign * n;
-	return sum;
-
+	}
+	return sign * sum;
 }
 
 //-------------------------Test Cases----------------------------
