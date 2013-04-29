@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
+#include <time.h>
 
 //随机产生随机数组
 void generateArray(int n[], int num) {
