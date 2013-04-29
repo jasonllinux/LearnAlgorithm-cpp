@@ -1,18 +1,20 @@
 #include "stack.h"
 
 
-//TODO 入栈 有问题
+//压栈
 stack *push(stack* HQ, int x) {
 	node *s;
 	s = (node *)malloc(sizeof(node));
 	s->data = x;
 	s->next = NULL;
 
+	//入栈
 	if(HQ->bottom == NULL) {
 		HQ->bottom = s;
 		HQ->top = s;
 	}else {
-		HQ->top->next = s;
+		//压栈
+		HQ->top->next = s;  // 栈的next是 从底向上的
 		HQ->top = s;
 	}
 	return HQ;
@@ -35,8 +37,8 @@ stack* pop(stack* HQ) {
 		}else {
 			while(p->next != HQ->top) {
 				p = p->next;
-			}
-			HQ->top = p;
+			}  //找出第二高的栈元素
+			HQ->top = p;  //改变栈顶元素
 			HQ->bottom->next = NULL;
 		}
 		return HQ;

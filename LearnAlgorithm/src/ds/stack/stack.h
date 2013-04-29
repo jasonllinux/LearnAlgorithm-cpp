@@ -8,7 +8,6 @@ using namespace std;
 typedef struct student {
 	int data;
 	struct student * next;
-
 }node;
 
 

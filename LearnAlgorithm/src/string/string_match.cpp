@@ -4,7 +4,6 @@
 using namespace std;
 
 
-
 //简单的匹配方法
 void nativeStringMatch(char* target, char* pattern) {
 	int tarLen = 0;        // Length of Target

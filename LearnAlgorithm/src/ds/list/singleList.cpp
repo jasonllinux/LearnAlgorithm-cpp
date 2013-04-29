@@ -61,7 +61,6 @@ void print(node *head) {
 	}
 	while(p!=NULL) {
 		printf(" %d ,", p->data);
-
 		p = p->next;
 	}
 	printf("\n");
@@ -89,7 +88,6 @@ node *del(node *head, int num) {
 		}
 	}else {
 		printf("%d could not been found ", num);
-
 	}
 	return head;
 }
@@ -125,7 +123,7 @@ node *insert(node *head, int num) {
 }
 
 
-//TODO 简单排序
+// 简单排序
 node *sort(node *head) {
 	printf("sort the list \n");
 	node *p;

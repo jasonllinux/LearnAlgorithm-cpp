@@ -56,6 +56,14 @@ int string_len(char* str) {
 	return count;
 }
 
+
+//模拟strstr函数
+char* string_str(char *str1, char *str2) {
+
+	return NULL;
+}
+
+
 //整型转换成ASICII码
 //void string_itoa(int num, char s[]) {
 //	int i, j, sign;
